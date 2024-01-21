@@ -13,6 +13,8 @@ import routerBindings, {
 import { App as AntdApp } from "antd";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ForgotPassword, Home, Login, Register } from "./pages";
+
 
 function App() {
   return (
@@ -37,6 +39,10 @@ function App() {
             >
               <Routes>
                 <Route index element={<WelcomePage />} />
+                <Route index element={<Home />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/forgot-password" element={<ForgotPassword />} />
               </Routes>
               <RefineKbar />
               <UnsavedChangesNotifier />
